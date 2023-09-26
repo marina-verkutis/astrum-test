@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    width: 62%;
+    width: 75%;
     margin: 0 auto;
     max-width: 1300px;
 }
@@ -36,32 +36,26 @@ body {
 }
 
 
-.header::after {
+.header::after, .header::before {
 	content: '';
 	z-index: 1;
     position: absolute; 
     width: 577px;
     height: 100%;
-    left: 0; 
     bottom: 0;
-    background-image: url(../img/MafiaCostume_2022\ 2.png);
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: cover;
 }
 
-.header::before {
-	content: '';
-	z-index: 1;
-    position: absolute; 
-    width: 577px;
-    height: 100%;
+.header::after {
+    background-image: url(../img/MafiaCostume_2022\ 2.png);
     right: 0;
-    bottom: 0;
+}
+
+.header::before {
     background-image: url(../img/MafiaCostume_2022\ 3.png);
-	background-repeat: no-repeat;
-	background-position: center;
-    background-size: cover;
+    left: 0;
 }
 
 .header__decorate {
@@ -117,13 +111,9 @@ body {
 }
 
 .header__boxes {
-    background-image: url(../img/boxes.png);
-    height: 525px;
     width: 766px;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
     margin-top: -100px;
+    max-width: 100%
 }
 
 
@@ -162,7 +152,9 @@ body {
     z-index: 0;
     display: flex;
     justify-content: space-between;
+    align-items:center;
     padding: 50px 0;
+    min-height: 100vh;
 }
 
 .offer__content {
@@ -174,6 +166,7 @@ body {
 .offer__character {
     max-width: 441px;
     max-height: 890px;
+    margin-right: 50px;
     position: relative;
     z-index: 3;
 }
@@ -293,4 +286,150 @@ body {
 
 .price {
     font-size: 5rem;
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .header__logo {
+        width: 200px;
+        margin-top: -70px;
+    }
+
+    .header__boxes {
+        width: 90%;
+        margin-top: -120px;
+    }
+
+    .header__title {
+        font-size: 2.2rem;
+        margin: 0;
+    }
+
+    .header__desc {
+        font-size: 1.5rem;
+    }
+
+    .header::after, .header::before {
+        width: 150px;
+    }
+
+    .offer__content {
+        flex-direction: column;
+    }
+
+    .img-character {
+        width: 70%;
+    }
+
+    .offer__character::before {
+        display: none;
+    }
+
+    .offer__title {
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    .grid-row {
+        font-size: 1rem;
+    }
+
+    .offer__desc {
+        width: 90%;
+        text-align: center;
+    }
+
+    .grid-row {
+        width: 100%;
+        grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    }
+
+    .buy {
+        flex-direction: column;
+        align-content: center;
+        margin-top: 0;
+    }
+
+    .cost {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .buy-img {
+        width: 80%;
+    }
+
+    .tabs {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 959px) {
+    .header__logo {
+        width: 200px;
+        margin-top: -70px;
+    }
+
+    .header__boxes {
+        width: 80%;
+        margin-top: -120px;
+    }
+
+    .header__title {
+        font-size: 2.2rem;
+    }
+
+    .header__desc {
+        font-size: 1.5rem;
+    }
+
+    .header::after, .header::before {
+        width: 150px;
+    }
+
+    .offer__content {
+        flex-direction: column;
+    }
+
+    .img-character {
+        width: 300px;
+    }
+
+    .offer__character::before {
+        left: -150px;
+        bottom: 0px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1299px) {
+    .header__logo {
+        width: 200px;
+        margin-top: -50px;
+    }
+
+    .header__boxes {
+        width: 50%;
+        margin-top: -120px;
+    }
+
+    .header__title {
+        font-size: 3.2rem;
+    }
+
+    .img-character {
+        width: 300px;
+    }
+    
+    .offer__character::before {
+        left: -200px;
+        bottom: 0px;
+    }
+
 }
