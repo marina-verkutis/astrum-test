@@ -278,7 +278,21 @@ body {
     width: 180px;
     text-align: center;
     border-radius: 7px;
+    -webkit-transition: .3s;
+    transition: .3s;
 }
+
+.btn:hover {
+    background-color: #73BCFE;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.btn:active {
+    background: #FCFF00;
+    filter: brightness(50%);
+}
+
 
 .cost {
     margin-left: -60px;
