@@ -50,12 +50,12 @@ body {
 
 .header::after {
     background-image: url(../img/MafiaCostume_2022\ 2.png);
-    right: 0;
+    left: 0;
 }
 
 .header::before {
     background-image: url(../img/MafiaCostume_2022\ 3.png);
-    left: 0;
+    right: 0;
 }
 
 .header__decorate {
