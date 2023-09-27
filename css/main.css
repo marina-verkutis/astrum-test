@@ -291,10 +291,6 @@ body {
 
 @media (max-width: 480px) {
 
-    .container {
-        width: 95%;
-    }
-
     .header__logo {
         width: 200px;
         margin-top: -70px;
@@ -391,7 +387,7 @@ body {
     }
 
     .header::after, .header::before {
-        width: 150px;
+        width: 200px;
     }
 
     .offer__content {
@@ -405,6 +401,7 @@ body {
     .offer__character::before {
         left: -150px;
         bottom: 0px;
+        width: 190%;
     }
 }
 
